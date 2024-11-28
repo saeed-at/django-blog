@@ -20,3 +20,12 @@ __pycache__/
 # IDE settings (optional but recommended)
 .idea/
 .vscode/
+
+# Pytest
+.pytest_cache/
+.coverage
+.htmlcov/
+
+# md
+*.md
+steps.txt #! to comment during watching video
