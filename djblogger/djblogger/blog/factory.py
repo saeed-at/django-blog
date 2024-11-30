@@ -36,14 +36,14 @@ class PostFactory(factory.django.DjangoModelFactory):
 
         else:
             self.tags.add(
-                "Python",
-                "Django",
-                "JavaScript",
-                "Web Development",
-                "Programming",
-                "Database",
-                "API",
-                "Frontend",
-                "Backend",
-                "DevOps",
+                "python",
+                "django",
+                "javascript",
+                "web-development",
+                "programming",
+                "database",
+                "api",
+                "front-end",
+                "back-end",
+                "devpps",
             )
