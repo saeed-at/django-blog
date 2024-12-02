@@ -28,4 +28,8 @@ __pycache__/
 
 # md
 *.md
-steps.txt #! to comment during watching video
+steps.txt
+
+# Logs and backups
+*.logs
+backups/
