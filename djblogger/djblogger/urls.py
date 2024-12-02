@@ -1,24 +1,25 @@
 """
-URL configuration for djblogger project.
+Main URL Configuration for djblogger project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+This module handles the root URL configurations and includes other URL patterns
+from different apps within the project.
+
+Notes
+-----
+The urlpatterns list routes URLs to views using Django's URL dispatcher.
+For more details, see: https://docs.djangoproject.com/en/4.2/topics/http/urls/
+
+See Also
+--------
+django.urls.path : Function to define URL patterns
+django.urls.include : Function to include other URLconf modules
 """
 
 from django.contrib import admin
-from django.urls import path, include  #! step1
+from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # This allows the blog app to handle its own URL routing independently
     path("", include("djblogger.blog.urls")),
 ]

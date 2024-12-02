@@ -8,8 +8,10 @@ django-taggit==6.1.0
 exceptiongroup==1.2.2
 factory_boy==3.3.1
 Faker==33.0.0
+importlib_metadata==8.5.0
 inflection==0.5.1
 iniconfig==2.0.0
+Markdown==3.7
 mypy-extensions==1.0.0
 packaging==24.2
 pathspec==0.12.1
@@ -25,3 +27,4 @@ six==1.16.0
 sqlparse==0.5.2
 tomli==2.1.0
 typing_extensions==4.12.2
+zipp==3.21.0

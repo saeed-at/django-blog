@@ -6,12 +6,29 @@ from djblogger.settings import base
 
 
 def main():
-    """Run administrative tasks."""
+    """Execute Django administrative tasks based on environment settings.
 
+    This function determines the appropriate settings module to use based on DEBUG status
+    and executes Django's command-line interface.
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+
+    Raises
+    ------
+    ImportError
+        If Django is not properly installed or the virtual environment is not activated
+    """
+    # Determine which settings module to use based on DEBUG status
     if base.DEBUG:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djblogger.settings.local')
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "djblogger.settings.local")
     else:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djblogger.settings.production')
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "djblogger.settings.production")
 
     try:
         from django.core.management import execute_from_command_line
@@ -21,8 +38,9 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
+
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
