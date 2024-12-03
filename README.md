@@ -19,7 +19,6 @@ DjBlogger is a modern blog platform built with Django, featuring infinite scroll
 - 🔍 Advanced search functionality
 - 📱 Responsive design for seamless usage across devices                            
 - ✍️ Markdown support
-- 📊 Comprehensive logging
 - 💾 Automated backup system
 - ⚡ Seamless HTMX integration
  
